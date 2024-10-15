@@ -23,8 +23,12 @@ function changeVideos(event: Event) {
 
     <div>
       </input>
-      <div v-for="(videos,key) in videosObj" :key="key" class="grid cols-4">
-        <video v-for="(video,i) of videos" :key="video.url" :src="video.url" autoplay controls :class="['border rd-md',i === videos.length - 1 ? 'mb4' : '']"></video>
+      <div v-for="(videos,key) in videosObj" :key="key" >
+        <div class="grid cols-4">
+          <video v-for="(video,i) of videos" :key="video.url" :src="video.url" autoplay controls class="border rd-md"></video>
+        </div>
+
+        <div class="h8 bg-red"></div>
       </div>
     </div>
 </template>
